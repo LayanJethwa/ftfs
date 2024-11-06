@@ -95,7 +95,7 @@ def map_gen():
             folium.Circle((ftf[i][4][0],ftf[i][4][1]), radius=50+(5*[math.floor(((ftf[i][1]-minimum)/(maximum-minimum))*50),100][ftf[i][1]>upper]), 
                         fill=True, fill_opacity=0.6, color=[gradient[math.floor((([ftf[i][1],0][ftf[i][1]>upper]-minimum)/(maximum-minimum))*50)].hex_l,Color("cyan").hex_l][ftf[i][1]>upper],
                         tooltip=f'{i}<br>{ftf[i][3]}<br> Published: {ftf[i][2].strftime("%d/%m/%Y")}',
-                        popup=f'''<a href=https//coord.info/{i} target="_blank">{str(ftf[i][1])} days</a>
+                        popup=f'''<a href=https://coord.info/{i} target="_blank">{str(ftf[i][1])} days</a>
                         <br>FTFer(s): {', '.join(ftf[i][0])}''').add_to(feature_groups[person_count])
     
     for group in feature_groups:
